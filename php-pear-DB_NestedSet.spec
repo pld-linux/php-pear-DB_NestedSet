@@ -32,7 +32,7 @@ relational database. The package provides a way to:
   - TigraMenu (http://www.softcomplex.com/products/tigra_menu/)
 - It also features caching of SQL queries using PEAR::Cache.
 
-This class has in PEAR status: %{_status}.
+In PEAR status of this package is: %{_status}.
 
 %description -l pl
 DB_NestedSet pozwala na tworzenie drzew nieskoñczonej d³ugo¶ci
