@@ -1,5 +1,3 @@
-# ToDo:
-# - pl description
 %include	/usr/lib/rpm/macros.php
 %define         _class          DB
 %define         _subclass       NestedSet
@@ -21,17 +19,35 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-DB_NestedSet let's you create trees with infinite depth inside a
-relational database. The package provides a way to o
-create/update/delete nodes o query nodes, trees and subtrees o copy
-(clone) nodes, trees and subtrees o move nodes, trees and subtrees o
-call event handlers on specific events like on node deletion o output
-the tree with
-- PEAR::HTML_TreeMenu
-- TigraMenu (http://www.softcomplex.com/products/tigra_menu/) o It
-  also features caching of SQL queries using PEAR::Cache
+DB_NestedSet lets you create trees with infinite depth inside a
+relational database. The package provides a way to:
+* create/update/delete nodes
+* query nodes, trees and subtrees
+* copy (clone) nodes, trees and subtrees
+* move nodes, trees and subtrees
+* call event handlers on specific events like on node deletion
+* output the tree with
+  - PEAR::HTML_TreeMenu
+  - TigraMenu (http://www.softcomplex.com/products/tigra_menu/)
+* It also features caching of SQL queries using PEAR::Cache.
 
 This class has in PEAR status: %{_status}.
+
+%description -l pl
+DB_NestedSet pozwala na tworzenie drzew nieskoñczonej d³ugo¶ci
+wewn±trz relacyjnych baz danych. Pakiet umo¿liwia:
+* tworzenie/modyfikowanie/usuwanie wêz³ów
+* odpytywanie wêz³ów, drzew i poddrzew
+* kopiowanie (klonowanie) wêz³ów, drzew i poddrzew
+* przenoszenie wêz³ów, drzew i poddrzew
+* wywo³ywanie procedur obs³ugi dla okre¶lonych zdarzeñ typu usuwanie
+  wêz³a
+* pokazanie drzewa przy u¿yciu:
+  - PEAR::HTML_TreeMenu
+  - TigraMenu (http://www.softcomplex.com/products/tigra_menu/)
+* mo¿e tak¿e buforowaæ zapytania SQL przy u¿yciu PEAR::Cache.
+
+Ta klasa ma w PEAR status: %{_status}.
 
 %prep
 %setup -q -c
