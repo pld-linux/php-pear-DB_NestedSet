@@ -6,12 +6,12 @@
 Summary:	%{_pearname} - API to build and query nested sets
 Summary(pl):	%{_pearname} - API to tworzenia i wykonywania zagnie¿dzonych zapytañ
 Name:		php-pear-%{_pearname}
-Version:	1.2.1
+Version:	1.2.2
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
-# Source0-md5:	718e2084f0abfb48898d595cf016c5ca
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
+# Source0-md5:	7b3c8bb2878b1531dfa78a4d6728478e
 URL:		http://pear.php.net/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
@@ -21,31 +21,31 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 DB_NestedSet lets you create trees with infinite depth inside a
 relational database. The package provides a way to:
-* create/update/delete nodes
-* query nodes, trees and subtrees
-* copy (clone) nodes, trees and subtrees
-* move nodes, trees and subtrees
-* call event handlers on specific events like on node deletion
-* output the tree with
+- create/update/delete nodes
+- query nodes, trees and subtrees
+- copy (clone) nodes, trees and subtrees
+- move nodes, trees and subtrees
+- call event handlers on specific events like on node deletion
+- output the tree with
   - PEAR::HTML_TreeMenu
   - TigraMenu (http://www.softcomplex.com/products/tigra_menu/)
-* It also features caching of SQL queries using PEAR::Cache.
+- It also features caching of SQL queries using PEAR::Cache.
 
 This class has in PEAR status: %{_status}.
 
 %description -l pl
 DB_NestedSet pozwala na tworzenie drzew nieskoñczonej d³ugo¶ci
 wewn±trz relacyjnych baz danych. Pakiet umo¿liwia:
-* tworzenie/modyfikowanie/usuwanie wêz³ów
-* odpytywanie wêz³ów, drzew i poddrzew
-* kopiowanie (klonowanie) wêz³ów, drzew i poddrzew
-* przenoszenie wêz³ów, drzew i poddrzew
-* wywo³ywanie procedur obs³ugi dla okre¶lonych zdarzeñ typu usuwanie
+- tworzenie/modyfikowanie/usuwanie wêz³ów
+- odpytywanie wêz³ów, drzew i poddrzew
+- kopiowanie (klonowanie) wêz³ów, drzew i poddrzew
+- przenoszenie wêz³ów, drzew i poddrzew
+- wywo³ywanie procedur obs³ugi dla okre¶lonych zdarzeñ typu usuwanie
   wêz³a
-* pokazanie drzewa przy u¿yciu:
+- pokazanie drzewa przy u¿yciu:
   - PEAR::HTML_TreeMenu
   - TigraMenu (http://www.softcomplex.com/products/tigra_menu/)
-* mo¿e tak¿e buforowaæ zapytania SQL przy u¿yciu PEAR::Cache.
+- mo¿e tak¿e buforowaæ zapytania SQL przy u¿yciu PEAR::Cache.
 
 Ta klasa ma w PEAR status: %{_status}.
 
