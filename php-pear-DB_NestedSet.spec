@@ -1,18 +1,18 @@
 %include	/usr/lib/rpm/macros.php
 %define		_class		DB
 %define		_subclass	NestedSet
-%define		_status		stable
+%define		_status		beta
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - API to build and query nested sets
 Summary(pl):	%{_pearname} - API to tworzenia i wykonywania zagnie¿dzonych zapytañ
 Name:		php-pear-%{_pearname}
-Version:	1.3.2
+Version:	1.3.3
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	fd15348a64d85faedffc20fd087d6f48
+# Source0-md5:	1e63acd2bcbc1a09a56f319784e8648d
 URL:		http://pear.php.net/package/DB_NestedSet/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
