@@ -7,12 +7,12 @@
 Summary:	%{_pearname} - API to build and query nested sets
 Summary(pl):	%{_pearname} - API to tworzenia i wykonywania zagnie¿dzonych zapytañ
 Name:		php-pear-%{_pearname}
-Version:	1.3.5
+Version:	1.3.6
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	fe33b1b8323bb43e9dcd87fdb4955c97
+# Source0-md5:	556e7afbf740c0f18b35bfd820fd75b9
 URL:		http://pear.php.net/package/DB_NestedSet/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
