@@ -5,8 +5,8 @@
 %define         _subclass       NestedSet
 %define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
-Summary:	%{_pearname} - API to build and query nested sets 
-Summary(pl):	%{_pearname} - API to tworzenia i wykonywania zagnie¿dzonych zapytañ 
+Summary:	%{_pearname} - API to build and query nested sets
+Summary(pl):	%{_pearname} - API to tworzenia i wykonywania zagnie¿dzonych zapytañ
 Name:		php-pear-%{_pearname}
 Version:	1.2.1
 Release:	1
@@ -21,19 +21,15 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-DB_NestedSet let's you create trees with infinite depth
-inside a relational database.
-The package provides a way to
-o create/update/delete nodes
-o query nodes, trees and subtrees
-o copy (clone) nodes, trees and subtrees
-o move nodes, trees and subtrees
-o call event handlers on specific events like
-on node deletion
-o output the tree with
+DB_NestedSet let's you create trees with infinite depth inside a
+relational database. The package provides a way to o
+create/update/delete nodes o query nodes, trees and subtrees o copy
+(clone) nodes, trees and subtrees o move nodes, trees and subtrees o
+call event handlers on specific events like on node deletion o output
+the tree with
 - PEAR::HTML_TreeMenu
-- TigraMenu (http://www.softcomplex.com/products/tigra_menu/)
-o It also features caching of SQL queries using PEAR::Cache 
+- TigraMenu (http://www.softcomplex.com/products/tigra_menu/) o It
+  also features caching of SQL queries using PEAR::Cache
 
 This class has in PEAR status: %{_status}.
 
