@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - API to build and query nested sets
-Summary(pl):	%{_pearname} - API to tworzenia i wykonywania zagnie¿dzonych zapytañ
+Summary(pl):	%{_pearname} - API to tworzenia i wykonywania zagnie¿d¿onych zapytañ
 Name:		php-pear-%{_pearname}
 Version:	1.3.6
 Release:	1
