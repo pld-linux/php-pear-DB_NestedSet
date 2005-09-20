@@ -8,16 +8,20 @@ Summary:	%{_pearname} - API to build and query nested sets
 Summary(pl):	%{_pearname} - API to tworzenia i wykonywania zagnie¿d¿onych zapytañ
 Name:		php-pear-%{_pearname}
 Version:	1.3.6
-Release:	2.1
+Release:	2.2
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	556e7afbf740c0f18b35bfd820fd75b9
 URL:		http://pear.php.net/package/DB_NestedSet/
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
+BuildRequires:	sed >= 4.0
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+# included in tests
+%define		_noautoreq 'pear(TestBase.php)' 'pear(UnitTest.php)'
 
 %description
 DB_NestedSet lets you create trees with infinite depth inside a
@@ -60,6 +64,14 @@ Tests for PEAR::%{_pearname}.
 
 %prep
 %pear_package_setup
+
+# fix tests
+cd ./%{php_pear_dir}/tests/%{_pearname}/tests
+# mac line endings!
+sed -i -e 's,\r,\n,g' index.php
+
+# make it suitable after install
+sed -i -e 's,NestedSet.php,DB/NestedSet.php,' *.php
 
 %install
 rm -rf $RPM_BUILD_ROOT
