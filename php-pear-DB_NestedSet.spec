@@ -15,6 +15,7 @@ Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	556e7afbf740c0f18b35bfd820fd75b9
 URL:		http://pear.php.net/package/DB_NestedSet/
+BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-12
 Requires:	php-pear
 BuildArch:	noarch
