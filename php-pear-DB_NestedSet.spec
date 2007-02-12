@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 Summary:	%{_pearname} - API to build and query nested sets
-Summary(pl):	%{_pearname} - API to tworzenia i wykonywania zagnieødøonych zapytaÒ
+Summary(pl.UTF-8):   %{_pearname} - API to tworzenia i wykonywania zagnie≈ºd≈ºonych zapyta≈Ñ
 Name:		php-pear-%{_pearname}
 Version:	1.3.6
 Release:	4
@@ -40,25 +40,25 @@ relational database. The package provides a way to:
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
-DB_NestedSet pozwala na tworzenie drzew nieskoÒczonej d≥ugo∂ci
-wewn±trz relacyjnych baz danych. Pakiet umoøliwia:
-- tworzenie/modyfikowanie/usuwanie wÍz≥Ûw
-- odpytywanie wÍz≥Ûw, drzew i poddrzew
-- kopiowanie (klonowanie) wÍz≥Ûw, drzew i poddrzew
-- przenoszenie wÍz≥Ûw, drzew i poddrzew
-- wywo≥ywanie procedur obs≥ugi dla okre∂lonych zdarzeÒ typu usuwanie
-  wÍz≥a
-- pokazanie drzewa przy uøyciu:
+%description -l pl.UTF-8
+DB_NestedSet pozwala na tworzenie drzew niesko≈Ñczonej d≈Çugo≈õci
+wewnƒÖtrz relacyjnych baz danych. Pakiet umo≈ºliwia:
+- tworzenie/modyfikowanie/usuwanie wƒôz≈Ç√≥w
+- odpytywanie wƒôz≈Ç√≥w, drzew i poddrzew
+- kopiowanie (klonowanie) wƒôz≈Ç√≥w, drzew i poddrzew
+- przenoszenie wƒôz≈Ç√≥w, drzew i poddrzew
+- wywo≈Çywanie procedur obs≈Çugi dla okre≈õlonych zdarze≈Ñ typu usuwanie
+  wƒôz≈Ça
+- pokazanie drzewa przy u≈ºyciu:
   - PEAR::HTML_TreeMenu
   - TigraMenu (http://www.softcomplex.com/products/tigra_menu/)
-- moøe takøe buforowaÊ zapytania SQL przy uøyciu PEAR::Cache.
+- mo≈ºe tak≈ºe buforowaƒá zapytania SQL przy u≈ºyciu PEAR::Cache.
 
 Ta klasa ma w PEAR status: %{_status}.
 
 %package tests
 Summary:	Tests for PEAR::%{_pearname}
-Summary(pl):	Testy dla PEAR::%{_pearname}
+Summary(pl.UTF-8):   Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
 Requires:	%{name} = %{epoch}:%{version}-%{release}
 AutoReq:	no
@@ -67,7 +67,7 @@ AutoProv:	no
 %description tests
 Tests for PEAR::%{_pearname}.
 
-%description tests -l pl
+%description tests -l pl.UTF-8
 Testy dla PEAR::%{_pearname}.
 
 %prep
