@@ -1,0 +1,11 @@
+--- DB_NestedSet-1.4.1/usr/share/pear/DB/NestedSet.php~	2010-08-20 19:31:24.000000000 +0300
++++ DB_NestedSet-1.4.1/usr/share/pear/DB/NestedSet.php	2010-08-20 19:32:13.742068041 +0300
+@@ -358,7 +358,7 @@
+             include_once($driverpath);
+         }
+         // Todo: Only load the node class when needed
+-        include_once('NestedSet/Node.php');
++        include_once('DB/NestedSet/Node.php');
+         $c = & new $classname($dsn, $params);
+         return $c;
+     }

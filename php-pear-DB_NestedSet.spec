@@ -3,17 +3,16 @@
 %define		_subclass	NestedSet
 %define		_status		stable
 %define		_pearname	%{_class}_%{_subclass}
-
 Summary:	%{_pearname} - API to build and query nested sets
 Summary(pl.UTF-8):	%{_pearname} - API to tworzenia i wykonywania zagnieżdżonych zapytań
 Name:		php-pear-%{_pearname}
 Version:	1.4.1
-Release:	1
-Epoch:		0
+Release:	2
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	b906275511a6f4d1e9b1ed95ac6d7546
+Patch0:		includepath.patch
 URL:		http://pear.php.net/package/DB_NestedSet/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-12
@@ -60,9 +59,9 @@ Ta klasa ma w PEAR status: %{_status}.
 Summary:	Tests for PEAR::%{_pearname}
 Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
-Requires:	%{name} = %{epoch}:%{version}-%{release}
-AutoReq:	no
+Requires:	%{name} = %{version}-%{release}
 AutoProv:	no
+AutoReq:	no
 
 %description tests
 Tests for PEAR::%{_pearname}.
@@ -72,17 +71,18 @@ Testy dla PEAR::%{_pearname}.
 
 %prep
 %pear_package_setup
+%patch0 -p1
 
-# fix tests
-cd ./%{php_pear_dir}/tests/%{_pearname}/tests
-
-# make it suitable after install
-sed -i -e 's,NestedSet.php,DB/NestedSet.php,' *.php
+install -d examples
+mv docs/%{_pearname}/docs/*example.php examples
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}
 %pear_package_install
+
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -a examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -95,6 +95,8 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{php_pear_dir}/%{_class}/%{_subclass}
 %{php_pear_dir}/%{_class}/*.php
 %{php_pear_dir}/%{_class}/%{_subclass}/*.php
+
+%{_examplesdir}/%{name}-%{version}
 
 %files tests
 %defattr(644,root,root,755)
