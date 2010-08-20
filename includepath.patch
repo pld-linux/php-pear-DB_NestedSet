@@ -1,3 +1,5 @@
+Upstream-Tracker: http://pear.php.net/bugs/bug.php?id=17768
+
 --- DB_NestedSet-1.4.1/usr/share/pear/DB/NestedSet.php~	2010-08-20 19:31:24.000000000 +0300
 +++ DB_NestedSet-1.4.1/usr/share/pear/DB/NestedSet.php	2010-08-20 19:32:13.742068041 +0300
 @@ -358,7 +358,7 @@
