@@ -18,6 +18,7 @@ BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-12
 BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	php-pear
+Obsoletes:	php-pear-DB_NestedSet-tests
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -55,20 +56,6 @@ wewnątrz relacyjnych baz danych. Pakiet umożliwia:
 
 Ta klasa ma w PEAR status: %{_status}.
 
-%package tests
-Summary:	Tests for PEAR::%{_pearname}
-Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
-Group:		Development/Languages/PHP
-Requires:	%{name} = %{version}-%{release}
-AutoProv:	no
-AutoReq:	no
-
-%description tests
-Tests for PEAR::%{_pearname}.
-
-%description tests -l pl.UTF-8
-Testy dla PEAR::%{_pearname}.
-
 %prep
 %pear_package_setup
 %patch0 -p1
@@ -97,7 +84,3 @@ rm -rf $RPM_BUILD_ROOT
 %{php_pear_dir}/%{_class}/%{_subclass}/*.php
 
 %{_examplesdir}/%{name}-%{version}
-
-%files tests
-%defattr(644,root,root,755)
-%{php_pear_dir}/tests/*
