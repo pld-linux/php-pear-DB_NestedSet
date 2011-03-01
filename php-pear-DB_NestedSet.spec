@@ -7,7 +7,7 @@ Summary:	%{_pearname} - API to build and query nested sets
 Summary(pl.UTF-8):	%{_pearname} - API to tworzenia i wykonywania zagnieżdżonych zapytań
 Name:		php-pear-%{_pearname}
 Version:	1.4.1
-Release:	2
+Release:	3
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
